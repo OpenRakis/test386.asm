@@ -28,7 +28,7 @@ COM_PORT_DIV equ 0x0001
 
 ; Additional port for direct ASCII output.
 ; Possible values: any 16-bit value, 0=disabled.
-OUT_PORT equ 0
+OUT_PORT equ 0x400
 
 ; Enable POST E0 test for undefined behaviours and bugs. You also need to
 ; specify the CPU model your emulator implements (see CPU_FAMILY).
