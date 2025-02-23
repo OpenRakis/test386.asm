@@ -232,6 +232,7 @@ cpuTest:
 
 	advTestSegReal
 
+%if TEST_PMODE
 
 ; ==============================================================================
 ;	Protected mode tests
@@ -247,6 +248,7 @@ cpuTest:
 
 ESP_R0_PROT equ 0x0000FFFF
 ESP_R3_PROT equ 0x00007FFF
+
 
 %include "protected_m.asm"
 
@@ -1355,7 +1357,6 @@ rotate386FlagsTest:
 
 	jmp arithLogicTests
 
-
 arithLogicTests:
 ;-------------------------------------------------------------------------------
 	POST EE
@@ -1491,6 +1492,7 @@ DivExcHandlerRet:
 
 %include "tests/arith-logic_d.asm"
 
+%endif
 
 postFF:
 ;-------------------------------------------------------------------------------

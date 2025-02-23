@@ -8,7 +8,7 @@
 
 ; The diagnostic port used to emit the current test procedure number.
 ; Possible values: the 16-bit value of the diagnostic port of your system.
-POST_PORT equ 0x190
+POST_PORT equ 0x999
 
 ; The parallel port to use to print ASCII computational results.
 ; Possible values: 0=disabled, 1=LPT1 (3BCh), 2=LPT2 (378h), 3=LPT3 (278h)
@@ -28,12 +28,15 @@ COM_PORT_DIV equ 0x0001
 
 ; Additional port for direct ASCII output.
 ; Possible values: any 16-bit value, 0=disabled.
-OUT_PORT equ 0x400
+OUT_PORT equ 0x998
 
 ; Enable POST E0 test for undefined behaviours and bugs. You also need to
 ; specify the CPU model your emulator implements (see CPU_FAMILY).
 ; Possible values: 1=enable POST E0, 0=skip the tests
 TEST_UNDEF equ 0
+
+; Enable PMODE tests
+TEST_PMODE equ 0
 
 ; The CPU family option is used only when POST E0 is enabled.
 ; Possible values: 3=80386
@@ -51,7 +54,7 @@ IBM_PS1 equ 0
 
 ; Enable some additional text output on the output ports (useful for test386.asm
 ; debugging).
-DEBUG equ 0
+DEBUG equ 1
 
 
 ; == END OF CONFIGURATION ======================================================
